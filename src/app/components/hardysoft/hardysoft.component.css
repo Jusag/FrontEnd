@@ -1,0 +1,48 @@
+.row{
+    padding: 15px;
+    color: white;
+
+    border-style: solid;
+    border-width: 3px;
+    border-image: linear-gradient(to left, rgba(0, 0, 0, 5%) 1%, rgb(255, 255, 255,50%) 50%, rgba(0, 0, 0, 5%)) 100% 0 0 0/3px 0 3px 0 stretch;
+}
+.sphereskill{
+    padding: 20px;
+    text-align: center;
+}
+#title-hys{
+    text-align: center;
+}
+.title-durasyblandas{
+    padding: 1px 40px;
+    text-align: center;
+}
+@media(max-width:575px){
+    .title-durasyblandas{
+        text-align: center;
+    }
+    .sphereskill{
+        text-align: center;
+    }
+}
+.title-plus{
+    text-align: center;
+}
+
+.hardsoft-container{
+    display:grid;
+    width: 95%;
+    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    grid-gap:10px;
+    padding:10px;
+    margin:20px 10px;
+    margin-left: 20px;
+}
+.btnEnExpGroup{
+    text-align: center;
+    margin-left: 30px;
+
+}
+.btnEnExp2{
+    margin: 5px;
+}

@@ -1,0 +1,48 @@
+.row{
+    padding: 15px;
+    color: white;
+    border-style: solid;
+    border-width: 3px;
+    border-image: linear-gradient(to left, rgba(0, 0, 0, 5%) 1%, rgb(255, 255, 255,50%) 50%, rgba(0, 0, 0, 5%)) 100% 0 0 0/3px 0 3px 0 stretch;
+}
+
+.title-plus{
+    padding: 5px;
+    text-align: center;
+}
+.title-educacion{
+    margin-right:5px;
+    text-align: center;
+}
+
+h3,h2,p{
+    color: white;
+}
+
+.nombreTitulo, .nombreAnio{
+    display: inline-block;
+}
+.nombreTitulo, .nombreAnio,.nombreLugar,.nombreDescripcion,.btnEnExp{
+    margin-left: 15px;
+}
+.nombreLugar{
+    font-weight: bold;
+}
+.nombreAnio{
+    margin-right: 5px;
+}
+
+.btn{
+    display: inline-block;
+}
+
+@media(min-width:576px){
+    .table{
+        position:relative;
+    }
+}
+@media(max-width:575px){
+    h3,h2,p,.btnEnEduGroup{
+        text-align: center;
+    }
+}

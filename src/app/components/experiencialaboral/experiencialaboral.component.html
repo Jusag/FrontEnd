@@ -1,0 +1,29 @@
+<div class="row">
+
+    <div class="title-plus">
+        <h1 class="title-experiencia">Experiencia Laboral</h1>
+        <button type="button" class="btn btn-primary button-plus" routerLink="/nuevaexp" *ngIf="isLogged">
+            <img src="../../../assets/plus-circle-regular-24.png" class="new-icon">
+        </button>
+    </div>
+
+    <div clss="col-xs-11 col-sm-7 col-md-8 col-lg-8">
+        <tr *ngFor="let Experiencia of exp">
+            <div>
+                <h3 class="nombreEmpresa">{{Experiencia.nombreE}}</h3>
+                <p class="nombreAnio">( {{Experiencia.anioIE}} - {{Experiencia.anioEE}} )</p>
+                <p class="nombreCargo">{{Experiencia.cargoE}}</p>
+                <p class="nombreDescripcion">{{Experiencia.descripcionE}}</p>
+                <div class="btnEnExpGroup" *ngIf="isLogged">
+                    <button class="btn btn-primary btnEnExp" routerLink="/editexp/{{Experiencia.id}}">
+                        <img src="../../../assets/edit-alt-solid-24.png" class="edit-icon">
+                    </button>
+                    <button class="btn btn-primary btnEnExp" (click)="delete(Experiencia.id)">
+                        <img src="../../../assets/trash-regular-24.png" class="trash-icon">
+                    </button>
+                </div>
+                <hr/>
+            </div>
+        </tr>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="title-plus">
+        <h1 id="title-hys">Habilidades</h1>
+        <h2 class="title-hys">(Duras y Blandas)</h2>
+        <button type="button" class="btn btn-primary button-plus" routerLink="/nuevahs" *ngIf="isLogged">
+                <img src="../../../assets/plus-circle-regular-24.png" class="new-icon">
+        </button>
+        
+    </div>
+    <div class="hardsoft-container">
+    <tr *ngFor="let HardSoft of hardsoft">
+        <div class="col-sm-3 col-md-3 col-lg-3 sphereskill">
+            <circle-progress [title]="HardSoft.nombreHS" 
+            [percent]="HardSoft.porcentajeHS" 
+            [radius]="60"
+            [titleFontSize]="'1em'" 
+            [space]="-10" 
+            [outerStrokeGradient]="true"
+            [outerStrokeWidth]="10" 
+            [titleColor]="'#ffffff'" 
+            [outerStrokeColor]="'#4882c2'"
+            [outerStrokeGradientStopColor]="'#53a9ff'" 
+            [innerStrokeColor]="'#e7e8ea'" 
+            [innerStrokeWidth]=10
+            [animateTitle]="true" 
+            [animationDuration]="250" 
+            [showUnits]="false" 
+            [showBackground]="false"
+            [showSubtitle]="false" 
+            [startFromZero]="false"></circle-progress>
+        </div>
+        <div class="btnEnExpGroup" *ngIf="isLogged">
+            <button class="btn btn-primary btnEnExp1" routerLink="/ediths/{{HardSoft.id}}">
+                <img src="../../../assets/edit-alt-solid-24.png" class="edit-icon">
+            </button>
+            <button class="btn btn-primary btnEnExp2" (click)="delete(HardSoft.id)">
+                <img src="../../../assets/trash-regular-24.png" class="trash-icon">
+            </button>
+        </div>
+    </tr>
+</div>
+</div>

@@ -1,0 +1,25 @@
+<div class="row">
+    <div>
+        <img  src="{{persona.img}}" class="walltopimage" alt="">
+    </div>
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+        <img src="{{persona.imgProfile}}" class="img-fluid profilefacepic">
+    </div>
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+        <h1 id="nombre">{{persona.nombre}} {{persona.apellido}}</h1>
+        <p id="titulo">{{persona.titulo}}</p>
+    </div>
+    <div class="col-xs-11 col-sm-7 col-md-8 col-lg-8">
+        <span>
+            <h3 id="acerca-de-mi-titulo">Acerca de mi</h3>
+            <p id="acerca-de-mi-detallado">
+                {{persona.descripcion}}
+            </p>
+        </span>
+        <p class="btn-align" *ngIf="isLogged">
+            <button class="btn btn-primary" routerLink="/editacerca/{{persona.id}}">
+                <img src="../../../assets/edit-alt-solid-24.png" class="edit-icon">
+            </button>
+        </p>
+    </div>
+</div>

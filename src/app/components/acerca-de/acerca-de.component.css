@@ -1,0 +1,65 @@
+div{
+    text-align: center;
+}
+.row{
+    padding: 5px;
+    color: white;
+}
+.walltopimage{
+    width: 100%;
+    height: auto;
+    padding: 0px;
+  }
+.profilefacepic{
+    background-color: #fff;
+    padding: 3px;
+    border-radius: 100%;
+}
+#nombre{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom:10px;
+    text-align: center;
+    border-bottom:2px solid rgb(0, 91, 211);
+}
+#titulo,#acerca-de-mi-titulo,#acerca-de-mi-detallado{
+    font-weight: bold;
+}
+.btn{
+    position: relative; 
+}    
+
+/* Se configuran los valores para resuluciones especiales */
+@media(min-width:576px){
+    .profilefacepic{
+        position:relative;
+        object-fit: inherit;
+        background-color: #fff;
+        padding: 2px;
+        min-width: 150px;
+        border-radius: 100%;
+        left: 10%;
+        top: -150px;
+    }
+    .btn{
+        position: relative;
+        left: 40%;
+    }
+}
+
+@media(max-width:575px){
+    .profilefacepic{
+        width:45%;
+    }
+    .btn{
+        position: relative;
+        text-align: center;
+    }
+}
+
+@media(max-width:719px){
+    #nombre{
+        font-weight: bold;
+        font-size: 24px;
+    }
+}

@@ -24,6 +24,8 @@ import { EditeducacionComponent } from './components/educacion/editeducacion.com
 import { EditacercadeComponent } from './components/acerca-de/editacercade.component';
 import { NewhardsoftComponent } from './components/hardysoft/newhardsoft.component';
 import { EdithardsoftComponent } from './components/hardysoft/edithardsoft.component';
+import { NewproyectoComponent } from './components/proyecto/newproyecto.component';
+import { EditproyectoComponent } from './components/proyecto/editproyecto.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { EdithardsoftComponent } from './components/hardysoft/edithardsoft.compo
     EditeducacionComponent,
     EditacercadeComponent,
     NewhardsoftComponent,
-    EdithardsoftComponent
+    EdithardsoftComponent,
+    NewproyectoComponent,
+    EditproyectoComponent
   ],
   imports: [
     FormsModule,

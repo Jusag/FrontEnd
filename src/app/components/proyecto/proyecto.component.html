@@ -1,16 +1,32 @@
 <div class="row">
-    <h1 id="title-proyectos">Proyectos</h1>
-    <div class="container">
-        <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 bloque2">
-            <img class="proyect-image img-fluid" src="../../../assets/profileface.jpg">
-        </div>
-        
-        <div class="col-sm-12 col-md-7 col-lg-7 bloque1">
-            <h2>Argentina Programa</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tempor nec feugiat nisl. Luctus accumsan tortor posuere ac ut consequat semper viverra. Egestas purus viverra accumsan in. Vestibulum </p>
-        </div>
-        
-        
+    <div class="title-plus">
+        <h1 id="title-hys">Proyectos</h1>
+        <button type="button" class="btn btn-primary button-plus" routerLink="/nuevaproy" *ngIf="isLogged">
+            <img src="../../../assets/plus-circle-regular-24.png" class="new-icon">
+        </button>
+
     </div>
 
+    <div class="container">
+        <tr *ngFor="let Proyecto of proyecto">
+            <div class="bloque2">
+                <a href="{{Proyecto.linkExtP}}">
+                    <img class="proyect-image img-fluid" src="{{Proyecto.linkImgP}}">
+                </a>
+                <div>
+                    <h2>{{Proyecto.nombreP}}</h2>
+                    <p>{{Proyecto.descripcionP}}</p>
+                </div>
+            </div>
+            
+            <div class="btnEnExpGroup bloque1" *ngIf="isLogged">
+                <button class="btn btn-primary btnEnExp1" routerLink="/editproy/{{Proyecto.id}}">
+                    <img src="../../../assets/edit-alt-solid-24.png" class="edit-icon">
+                </button>
+                <button class="btn btn-primary btnEnExp2" (click)="delete(Proyecto.id)">
+                    <img src="../../../assets/trash-regular-24.png" class="trash-icon">
+                </button>
+            </div>
+        </tr>
+    </div>
 </div>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Proyecto } from 'src/app/model/proyecto';
+import { ProyectoService } from 'src/app/service/proyecto.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-proyecto',
@@ -6,10 +9,37 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./proyecto.component.css']
 })
 export class ProyectoComponent implements OnInit {
+  proyecto: Proyecto[] = [];
+  constructor(
+    private sproyecto: ProyectoService,
+    private tokenService: TokenService
+  ) { }
 
-  constructor() { }
+  isLogged = false;
 
   ngOnInit(): void {
+    this.cargarProyecto();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+  }
+  
+  cargarProyecto(){
+    this.sproyecto.lista().subscribe(data => { this.proyecto = data; })
+  }
+
+  delete(id?: number) {
+    if (id != undefined) {
+      this.sproyecto.delete(id).subscribe(
+        data => {
+          this.cargarProyecto();
+        }, err => {
+          alert("No se puedo eleminar Skill");
+        }
+      )
+    }
   }
 
 }

@@ -1,41 +1,41 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Hardsoft } from 'src/app/model/hardsoft';
-import { HardsoftService } from 'src/app/service/hardsoft.service';
+import { Proyecto } from 'src/app/model/proyecto';
+import { ProyectoService } from 'src/app/service/proyecto.service';
 
 @Component({
-  selector: 'app-edithardsoft',
-  templateUrl: './edithardsoft.component.html',
-  styleUrls: ['./edithardsoft.component.css']
+  selector: 'app-editproyecto',
+  templateUrl: './editproyecto.component.html',
+  styleUrls: ['./editproyecto.component.css']
 })
-export class EdithardsoftComponent implements OnInit {
-  hardSoft: Hardsoft = null;
+export class EditproyectoComponent implements OnInit {
+  proyecto: Proyecto = null;
 
   constructor(
-    private sHardSoft: HardsoftService,
+    private sproyecto: ProyectoService,
     private activatedRouter: ActivatedRoute,
     private router: Router
   ) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.sHardSoft.detail(id).subscribe(
+    this.sproyecto.detail(id).subscribe(
       data => {
-        this.hardSoft = data;
+        this.proyecto = data;
       }, err => {
-        alert("Error al updatear experiencia");
+        alert("Error al updatear Proyecto");
         this.router.navigate(['']);
       }
     )
   }
-
+  
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.sHardSoft.update(id, this.hardSoft).subscribe(
+    this.sproyecto.update(id, this.proyecto).subscribe(
       data => {
         this.router.navigate(['']);
       }, err => {
-        alert("Error al updatear Experiencia.");
+        alert("Error al updatear Proyecto.");
         this.router.navigate(['']);
       }
     )

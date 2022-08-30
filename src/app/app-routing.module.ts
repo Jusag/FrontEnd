@@ -9,6 +9,8 @@ import { EdithardsoftComponent } from './components/hardysoft/edithardsoft.compo
 import { NewhardsoftComponent } from './components/hardysoft/newhardsoft.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { EditproyectoComponent } from './components/proyecto/editproyecto.component';
+import { NewproyectoComponent } from './components/proyecto/newproyecto.component';
 
 
 const routes: Routes = [
@@ -20,7 +22,9 @@ const routes: Routes = [
   { path: 'nuevaedu', component: NeweducacionComponent },
   { path: 'editedu/:id', component: EditeducacionComponent },
   { path: 'nuevahs', component: NewhardsoftComponent},
-  { path: 'ediths/:id', component: EdithardsoftComponent}
+  { path: 'ediths/:id', component: EdithardsoftComponent},
+  { path: 'nuevaproy', component: NewproyectoComponent},
+  { path: 'editproy/:id', component: EditproyectoComponent},
 ];
 
 @NgModule({

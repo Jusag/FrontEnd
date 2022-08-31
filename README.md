@@ -5,12 +5,7 @@
 Proyecto correspondiente al programa "Argentina Programa", segunda etapa "Yo Programo".
 
 # Partes principales
-Header
-Acerca de mi
-Experiencia laboral
-Educación
-Hard & Soft Skills
-Proyectos realizados
+Header-Acerca de mi-Experiencia laboral-Educación-Hard & Soft Skills-Proyectos realizados
 
 # Funcionalidades
 Ingreso al modo de edición mediante LOGIN con usuario y contraseña

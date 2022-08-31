@@ -1,28 +1,40 @@
 # Portfolio Gonzalez Julio
-![alt text]https://i.postimg.cc/yYSkqCny/normal.png
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+![normal](https://user-images.githubusercontent.com/34406115/187593753-23c076a4-c4dd-46f6-9046-f0d62e826e2e.png)
 
-## Development server
+Proyecto correspondiente al programa "Argentina Programa", segunda etapa "Yo Programo".
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Partes principales
+Header
+Acerca de mi
+Experiencia laboral
+Educación
+Hard & Soft Skills
+Proyectos realizados
 
-## Code scaffolding
+# Funcionalidades
+Ingreso al modo de edición mediante LOGIN con usuario y contraseña
+CRUD para las secciones de Experiencia laboral, Educación, Hard & Soft Skills y Proyectos
+Botón de LOGOUT para salir del modo de edición.
+Implementación de JWT
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Herramientas y Tecnologías utilizadas
 
-## Build
+# FRONTEND
+Visual Studio Code
+HTML
+CSS
+TypeScript
+Bootstrap
+Angular
+Firebase
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# BACKEND
+Netbeans
+SpringBoot
+Java
+Heroku
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# BASE DE DATOS
+MySQL
+Clever Cloud

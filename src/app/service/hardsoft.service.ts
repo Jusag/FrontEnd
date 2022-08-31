@@ -7,8 +7,8 @@ import { Hardsoft } from '../model/hardsoft';
   providedIn: 'root'
 })
 export class HardsoftService {
-  //eduURL = 'https://backendtest900.herokuapp.com/hardsoft/';
-  eduURL = 'http://localhost:8080/hardsoft/';
+  eduURL = 'https://backendporfoliojsgfinal.herokuapp.com/hardsoft/';
+  //eduURL = 'http://localhost:8080/hardsoft/';
 
   constructor(private httpClient: HttpClient) { }
   

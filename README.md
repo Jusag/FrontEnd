@@ -1,4 +1,5 @@
-# AngularSite
+# Portfolio Gonzalez Julio
+![alt text]https://postimg.cc/ZC4T3gGW
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 

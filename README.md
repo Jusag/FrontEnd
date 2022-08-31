@@ -16,7 +16,7 @@ Implementación de JWT
 # Herramientas y Tecnologías utilizadas
 
 # FRONTEND
-Visual Studio Code-HTML-CSS-TypeScript-Bootstrap-Angular-Firebase
+Visual Studio Code-HTML-CSS-Bootstrap-Angular-TypeScript-Firebase
 
 # BACKEND
 Netbeans-SpringBoot-Java-Heroku
